@@ -13,7 +13,7 @@ A Colorado Board of Elections employee has given you the following tasks to comp
 8. Determine the winner of the election based on popluar vote.
 9. Determine the county with the highest number of votes cast.
 
-Furthermore, a request has been made to provide an analysis of script used to conduct this election audit to determine if it can be used to conduct audits of other elections. 
+Furthermore, a request has been made to provide an analysis of the script used to conduct this election audit to determine if it can be used to conduct audits of other elections. 
 
 ## Resources
 - Data Source: election_results.csv
@@ -52,5 +52,10 @@ Here in line 48 the candidate name is being extracted from the third column of t
 
 ![Election Results Source](./Resources/election_results_source.png)
 
-To make the code more applicable to all potential elections some minor changes are recommended for ease of understanding in both the code and the format of the output. Firstly, as other elections may not be conducted on a county basis all variable, list and dictionary names referencing "county" should be updated to the more generic "electoral district". This will mean that anyone from any level of government using this code for election audit will understand the code more clearly. An example of what this woudl look like is below with the original code and the proposed modified code. 
+To make the code more applicable to all potential elections some minor changes are recommended for ease of understanding in both the code and the format of the output. Firstly, as other elections may not be conducted on a county basis all variable, list and dictionary names referencing "county" should be updated to the more generic "electoral district". This will mean that anyone from any level of government using this code for election audit will understand the code more clearly. An example of what this would look like is below with a section of the original code and the proposed modified code. 
 
+![County code](./Resources/county_code.png)
+
+![Electoral Districts Proposed Code](./Resources/electoral_district_proposed_code.png)
+
+Secondly, to compliment the changes to the code noted above the formatting of the output, both to the terminal and the test file, should also be updated to reflect the move away from the specific term "county" to the more general "electoral district". This would need to be done at both lines 88 and 113 with an example of one of these below as demonstration. 
