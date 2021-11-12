@@ -49,3 +49,8 @@ The script used for this election audit can easily be used for other elections w
 ![Candidate Name Script](./Resources/candidate_name_script.png)
 
 Here in line 48 the candidate name is being extracted from the third column of the source file and rows 55-58 save that name to the list of candidate options if it does not already exist there. That means that all the subsequent calculations in the script for candiate vote counts and percentages will work regardless of who or how many candidates are in the source file. The same is true for the code relating to the counties. This gives the script the flexibility to work for any type of election as long as the source file is formatted in the same fashion as the elections_results.csv that was the source file for this election audit.
+
+![Election Results Source](./Resources/election_results_source.png)
+
+To make the code more applicable to all potential elections some minor changes are recommended for ease of understanding in both the code and the format of the output. Firstly, as other elections may not be conducted on a county basis all variable, list and dictionary names referencing "county" should be updated to the more generic "electoral district". This will mean that anyone from any level of government using this code for election audit will understand the code more clearly. An example of what this woudl look like is below with the original code and the proposed modified code. 
+
