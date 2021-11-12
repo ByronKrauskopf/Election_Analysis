@@ -46,5 +46,6 @@ The analysis of the election show that:
 ## Summary of Election Audit Analysis
 The script used for this election audit can easily be used for other elections whether they are other Colorado congressional elections or not . The primary reason for this is that none of the variables, such as candidate name, are hardcoded into the script. Rather they are populated directly from the source document. An example of this is below.
 
-![](.candidate_name_script.png)
+![Candidate Name Script](./Resources/candidate_name_script.png)
 
+Here in line 48 the candidate name is being extracted from the third column of the source file and rows 55-58 save that name to the list of candidate options if it does not already exist there. That means that all the subsequent calculations in the script for candiate vote counts and percentages will work regardless of who or how many candidates are in the source file. The same is true for the code relating to the counties. This gives the script the flexibility to work for any type of election as long as the source file is formatted in the same fashion as the elections_results.csv that was the source file for this election audit.
